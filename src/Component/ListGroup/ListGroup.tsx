@@ -19,12 +19,12 @@ const ListItems = styled.li<ListItemProps>`
 `;
 
 interface props {
-  heading: string;
+  heading?: string;
   items: string[];
 }
 
 function ListGroup({ heading, items }: props) {
-  let [selectedIndex, setSelectedIndex] = useState(0);
+  let [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>

@@ -6,6 +6,10 @@ interface iconProps {
   activeColor?: string;
 }
 
+const transition = {
+  transition: "400ms ease-in-out",
+};
+
 const LikeIcon = ({ onClick, activeColor = "red" }: iconProps) => {
   const toggle = () => {
     setStatus(!status);
@@ -13,8 +17,27 @@ const LikeIcon = ({ onClick, activeColor = "red" }: iconProps) => {
   };
 
   const [status, setStatus] = useState(false);
-  if (status === false) return <FaRegHeart size="2rem" onClick={toggle} />;
-  return <FaHeart color={activeColor} size="2rem" onClick={toggle} />;
+
+  if (status)
+    return (
+      <div>
+        <p>
+          Thanks for the Like <FaHeart color="red" />{" "}
+        </p>
+        <FaHeart
+          style={transition}
+          color={activeColor}
+          size="2rem"
+          onClick={toggle}
+        />
+      </div>
+    );
+  return (
+    <div>
+      <p>Please Like</p>
+      <FaRegHeart style={transition} size="2rem" onClick={toggle} />
+    </div>
+  );
 };
 
 export default LikeIcon;
