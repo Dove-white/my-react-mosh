@@ -12,7 +12,7 @@ interface props {
     | "warning"
     | "danger"
     | ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button = ({ children, color = "primary", onClick }: props) => {

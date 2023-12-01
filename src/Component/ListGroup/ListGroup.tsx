@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 const List = styled.ul`
-  list-style: none;
+  list-style: normal;
 `;
 
 interface ListItemProps {
@@ -28,7 +28,7 @@ function ListGroup({ heading, items }: props) {
 
   return (
     <>
-      <h1 className="pt-4">{heading}</h1>
+      <h1 className="pt-0">{heading}</h1>
       {items.length == 0 && <p>No item found</p>}
       <List>
         {items.map((item, index) => (
