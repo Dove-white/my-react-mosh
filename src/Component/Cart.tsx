@@ -25,7 +25,10 @@ const Cart = ({ cartItems, onClick, onClickToAdd }: Props) => {
 
   return (
     <div>
-      <ListGroup items={cartItems.map((item) => item)}></ListGroup>
+      <ListGroup
+        heading="Cart"
+        items={cartItems.map((item) => item)}
+      ></ListGroup>
       {isVisible.clearBtn && (
         <Button color="danger" onClick={clickHandler}>
           Clear

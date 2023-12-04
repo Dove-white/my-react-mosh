@@ -3,7 +3,7 @@ interface Props {
 }
 
 const Navbar = ({ countCartItems }: Props) => {
-  return <div>Cart: {countCartItems}</div>;
+  return <div>Navbar: {countCartItems}</div>;
 };
 
 export default Navbar;
