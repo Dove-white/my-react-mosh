@@ -2,7 +2,7 @@ import ExpandableText from "./Component/ExpandableText";
 
 function App() {
   return (
-    <ExpandableText maxChars={10}>
+    <ExpandableText bgColor="dark">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
       provident qui, excepturi, modi dicta amet possimus corrupti animi beatae
       deserunt assumenda nobis sunt. Animi repellendus molestiae recusandae
